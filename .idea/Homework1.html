@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+</head>
+<body>
+<header>
+    <h1>TODO</h1>
+</header>
+<section class="todo-app___new-task-form">
+    <div class="new-task-form___item" role="form" aria-label="Form you can use to add new task">
+        <form action="doSmth">
+            <button type="submit">V</button>
+            <input type="text" placeholder="What needs to be done?" required>
+        </form>
+    </div>
+</section>
+<section class="todo-app___task-list">
+    <div class="task-list___item" role="list" aria-label="List of tasks">
+        <table>
+            <tr>
+                <th>
+                    <input type="checkbox" name="tasks" id="task1" aria-label="Mark as done">
+                    <label for="task1">HTML</label>
+                    <button type="reset">X</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" name="tasks" id="task2" aria-label="Mark as done">
+                    <label for="task2">Java</label>
+                    <button type="reset">X</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" name="tasks" id="task3" aria-label="Mark as done">
+                    <label for="task3">Algorithms and data structures</label>
+                    <button type="reset">X</button>
+                </th>
+        </table>
+    </div>
+</section>
+<section class="todo-app___actions-bar">
+    <div class="actions-bar___item">
+        <div class="task-counter">3 items left</div>
+    </div>
+    <div class="actions-bar___item">
+        <div class="task-filter" role="group" aria-label="Filter tasks by status">
+            <label class="task-filter___item">
+                <input type="radio" class="task-filter___input" name="filter" checked="checked" value="All"/>
+                <span class="task-filter___text" aria-label="Select all tasks">All</span>
+            </label>
+            <label class="task-filter___item">
+                <input type="radio" class="task-filter___input" name="filter" value="Active"/>
+                <span class="task-filter___text" aria-label="Select active tasks">Active</span>
+            </label>
+            <label class="task-filter___item">
+                <input type="radio" class="task-filter___input" name="filter" value="Completed"/>
+                <span class="task-filter___text" aria-label="Select completed tasks">Completed</span>
+            </label>
+        </div>
+    </div>
+    <div class="actions-bar___item">
+        <button class="task-clear-completed">Clear completed</button>
+    </div>
+</section>
+</body>
+</html>
