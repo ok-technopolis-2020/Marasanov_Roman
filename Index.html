@@ -1,63 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>TODO</title>
+    <meta charset="utf-8">
+    <title>todos</title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h1>TODO</h1>
-</header>
-<section class="todo-app___new-task-form">
-    <div class="new-task-form___item" role="form" aria-label="Form you can use to add new task">
-        <button aria-label="a button that adds the task specified in the form to the task list">V</button>
-        <input type="text" placeholder="What needs to be done?">
-    </div>
-</section>
-<section class="todo-app___task-list">
-    <div class="task-list___item" role="list" aria-label="List of tasks">
-        <ul>
-            <li>
-                <input type="checkbox" name="tasks" id="task1" aria-label="Mark as done">
-                <label for="task1">HTML</label>
-                <button aria-label="delete the task">X</button>
-            </li>
-            <li>
-                <input type="checkbox" name="tasks" id="task2" aria-label="Mark as done">
-                <label for="task2">Java</label>
-                <button aria-label="delete the task">X</button>
-            </li>
-            <li>
-                <input type="checkbox" name="tasks" id="task3" aria-label="Mark as done">
-                <label for="task3">Algorithms and data structures</label>
-                <button aria-label="delete the task">X</button>
-            </li>
-        </ul>
-    </div>
-</section>
-<section class="todo-app___actions-bar">
-    <div class="actions-bar___item">
-        <div class="task-counter">3 items left</div>
-    </div>
-    <div class="actions-bar___item">
-        <div class="task-filter" role="group" aria-label="Filter tasks by status">
-            <label class="task-filter___item">
-                <input type="radio" class="task-filter___input" name="filter" checked="checked" value="All"/>
-                <span class="task-filter___text" aria-label="Select all tasks">All</span>
-            </label>
-            <label class="task-filter___item">
-                <input type="radio" class="task-filter___input" name="filter" value="Active"/>
-                <span class="task-filter___text" aria-label="Select active tasks">Active</span>
-            </label>
-            <label class="task-filter___item">
-                <input type="radio" class="task-filter___input" name="filter" value="Completed"/>
-                <span class="task-filter___text" aria-label="Select completed tasks">Completed</span>
-            </label>
+<div class="todo">
+
+    <header>
+        <h1 class="title">todos</h1>
+    </header>
+
+    <main class="main-container">
+
+        <div class="top-panel">
+            <div class="select-all-btn-container">
+                <button class="select-all-button" aria-label="Select_all_todos">Select all</button>
+            </div>
+            <div class="new-task-input-container">
+                <label>
+                    <input class="new-todo-input" type="text" name="new_todo"
+                           placeholder="What needs to be done?">
+                </label>
+            </div>
         </div>
-    </div>
-    <div class="actions-bar___item">
-        <button class="task-clear-completed">Clear completed</button>
-    </div>
-</section>
+
+        <section class="tasks-list-container">
+            <ul class="tasks-list">
+
+                <li class="list-item">
+                    <div class="list-item-container">
+                        <input id="completed1" class="task-checkbox" type="checkbox"
+                               aria-label="Set as done">
+                        <label for="completed1" class="task-text">HTML</label>
+                    </div>
+                    <div class="list-item-delete-container">
+                        <button class="task-delete-btn" aria-label="delete this todo">Del</button>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="list-item-container">
+                        <input id="completed2" class="task-checkbox" checked="checked" type="checkbox"
+                               aria-label="Set as done">
+                        <label for="completed2"  class="task-text">CSS</label>
+                    </div>
+                    <div class="list-item-delete-container">
+                        <button class="task-delete-btn" aria-label="delete this todo">Del</button>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="list-item-container">
+                        <input id="completed3" class="task-checkbox" type="checkbox"
+                               aria-label="Set as done">
+                        <label for="completed3" class="task-text">JS</label>
+                    </div>
+                    <div class="list-item-delete-container">
+                        <button class="task-delete-btn" aria-label="delete this todo">Del</button>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="list-item-container">
+                        <input id="completed4" class="task-checkbox" type="checkbox"
+                               aria-label="Set as done">
+                        <label for="completed4" class="task-text">JS tools</label>
+                    </div>
+                    <div class="list-item-delete-container">
+                        <button class="task-delete-btn" aria-label="delete this todo">Del</button>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <footer class="footer">
+
+            <div class="footer-tasks-counter">3 items left</div>
+
+            <nav class="footer-nav-bar">
+                <input class="nav-bar-btn" type="radio" id="all" name="tabs" aria-label="Switch to all todos"
+                       checked="checked">
+                <label class="nav-bar-text" for="all">All</label>
+                <input class="nav-bar-btn" type="radio" id="active" name="tabs" aria-label="Switch to active todos">
+                <label class="nav-bar-text"  for="active">Active</label>
+                <input class="nav-bar-btn" type="radio" id="completed" name="tabs" aria-label="Switch to completed todos">
+                <label class="nav-bar-text" for="completed">Completed</label>
+            </nav>
+
+            <div class="footer-clear-completed-btn-container">
+                <button class="completed-btn" >Clear completed</button>
+            </div>
+
+        </footer>
+
+    </main>
+</div>
 </body>
 </html>
